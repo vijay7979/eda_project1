@@ -6,7 +6,7 @@ power = subset(raw_power, Date == "1/2/2007" | Date == "2/2/2007" )
 power$date_time = paste(power$Date, power$Time)
 power$date_time = strptime(power$date_time, "%d/ %m/ %Y %H: %M: %S", tz="GMT")
 
-#coverting character to numeric
+#coverting character format to numeric
 power$Global_active_power = as.numeric(power$Global_active_power)
 power$Global_reactive_power = as.numeric(power$Global_reactive_power)
 power$Voltage = as.numeric(power$Voltage)
